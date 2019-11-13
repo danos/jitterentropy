@@ -1,0 +1,14 @@
+Source: jitterentropy-rngd
+Section: utils
+Priority: optional
+Maintainer: Vyatta Package Maintainers <DL-vyatta-help@att.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: http://www.chronox.de/
+
+Package: jitterentropy-rngd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, lsb-base (>= 3.0-6)
+Description: jitterentropy rngd feeding entropy to input_pool of Linux RNG
+ Random Number Generator based on CPU timing jitter. This daemon is feeding the
+ entropy into input_pool of the Linux RNG.

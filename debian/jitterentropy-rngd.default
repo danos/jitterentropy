@@ -1,0 +1,10 @@
+# Defaults for jitterentropy-rngd initscript
+# sourced by /etc/init.d/jitterentropy-rngd
+# installed at /etc/default/jitterentropy-rngd by the maintainer scripts
+
+#
+# This is a POSIX shell fragment
+#
+
+# Additional options that are passed to the Daemon.
+DAEMON_OPTS=""

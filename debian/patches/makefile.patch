@@ -1,0 +1,18 @@
+---
+ Makefile |    5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+--- a/Makefile
++++ b/Makefile
+@@ -1,7 +1,10 @@
+ # Compile Noise Source as user space application
+ 
+ CC=gcc
+-override CFLAGS +=-Wall -pie -fPIE -Wl,-z,relro,-z,now
++CFLAGS +=-Wall -pie -fPIE -Wl,-z,relro,-z,now
++
++# Some Debian enhancements
++CFLAGS += -g -O0 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security
+ 
+ NAME := jitterentropy-rngd
+ #C_SRCS := $(wildcard *.c)
