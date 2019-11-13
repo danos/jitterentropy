@@ -1,0 +1,10 @@
+# Systemd configuration file
+
+[Unit]
+Description=Jitterentroppy Gatherer Daemon
+
+[Service]
+ExecStart=/usr/local/sbin/jitterentropy-rngd
+
+[Install]
+WantedBy=multi-user.target
